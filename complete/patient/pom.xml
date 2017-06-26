@@ -44,12 +44,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -60,19 +65,19 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencyManagement>
-	<dependencies>
-		<dependency>
+		<dependencies>
+			<dependency>
 				<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-dependencies</artifactId>
+				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>Dalston.SR1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 
 
 </project>

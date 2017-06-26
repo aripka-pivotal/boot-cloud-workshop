@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PatientController {
 	@Autowired
-	private PatientRepo patientRepo;
+	private PatientSvcClient patientSvcClient;
+	//private PatientRepo patientRepo;
 	
 	@RequestMapping("/viewPatients")
 	public String allPatients(Model model){
-		model.addAttribute("patients", patientRepo.findAll());
+		model.addAttribute("patients", patientSvcClient.allPatients());
 		return "patients";
 	}
 }
